@@ -10,15 +10,17 @@ import datetime
 
 # # --- Database Setup (SQLite) ---
 
-# DATABASE_URL = "sqlite:///./test.db"
-# # Use check_same_thread=False only for SQLite.
+
+
+
+# DISK_MOUNT_PATH = "/var/data"
+# DATABASE_URL = f"sqlite:///{DISK_MOUNT_PATH}/test.db"
+
+# # Use check_same_thread=False for SQLite.
 # engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
-
-DISK_MOUNT_PATH = "/var/data"
-DATABASE_URL = f"sqlite:///{DISK_MOUNT_PATH}/test.db"
-
-# Use check_same_thread=False for SQLite.
+DATABASE_URL = "sqlite:///./test.db"
+# Use check_same_thread=False only for SQLite.
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
