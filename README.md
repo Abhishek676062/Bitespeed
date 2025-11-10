@@ -21,7 +21,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/Abhishek676062/Bitespeed.git
 cd your-repo-name
 Create and activate a virtual environment:
 
